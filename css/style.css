@@ -13,13 +13,17 @@
 
   --font-family: Kumbh Sans;
 
-  --h1-size-mobile: 32px;
-  --h1-line-height-mobile: 32px;
-  --h1-weight-mobile: 700;
+  --h1-size: 32px;
+  --h1-line-height: 32px;
+  --h1-weight: 700;
 
   --text-summary-size-mobile: 13px;
   --text-summary-line-height-mobile: 13px;
   --text-summary-weight-mobile: 400;
+
+  --text-summary-size-desktop: 14px;
+  --text-summary-line-height-desktop: 14px;
+  --text-summary-weight-desktop: 400;
 
   --text-size: 12px;
   --text-line-height: 18px;
@@ -45,6 +49,10 @@ body {
   box-sizing: border-box;
 }
 
+html {
+  height: 100vh;
+}
+
 body {
   display: flex;
   align-items: center;
@@ -66,7 +74,6 @@ body {
 
 .illustration-wrapper {
   width: 100%;
-  height: 100%;
 }
 
 .illustration-mobile {
@@ -97,9 +104,9 @@ body {
 
 h1 {
   color: var(--color-neutral-dark);
-  font-size: var(--h1-size-mobile);
-  font-weight: var(--h1-weight-mobile);
-  line-height: var(--h1-line-height-mobile);
+  font-size: var(--h1-size);
+  font-weight: var(--h1-weight);
+  line-height: var(--h1-line-height);
   margin-bottom: 21px;
   text-align: center;
 }
@@ -122,6 +129,11 @@ summary {
   display: flex;
   justify-content: space-between;
   outline: none;
+}
+
+summary:hover {
+  color: var(--color-accent);
+  cursor: pointer;
 }
 
 summary::after {
@@ -162,4 +174,71 @@ details[open] summary ~ * {
 details[open] > summary {
   font-weight: 700;
   border-bottom: none;
+}
+
+@media only screen and (min-width: 890px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    max-width: 920px;
+    padding: 0;
+    justify-content: stretch;
+    margin: 0;
+    margin-left: 42px;
+  }
+
+  .card::before {
+    display: block;
+    content: url(../images/illustration-box-desktop.svg);
+    position: absolute;
+    margin-top: 210px;
+    margin-left: -92px;
+    z-index: 1000;
+  }
+
+  .illustration-wrapper {
+    display: block;
+    overflow: hidden;
+    width: 50%;
+  }
+
+  .illustration-mobile {
+    display: none;
+  }
+
+  .illustration-desktop {
+    display: block;
+    height: 100%;
+    background: url(../images/bg-pattern-desktop.svg);
+    background-position: right 70px bottom -143px;
+    background-repeat: no-repeat;
+  }
+
+  .illustration-desktop-woman {
+    display: block;
+    transform: translateX(-17.5%) translateY(20.3%);
+  }
+
+  .accordion {
+    width: 50%;
+    padding: 65px 95px 84px 15px;
+  }
+
+  h1 {
+    text-align: left;
+    margin-bottom: 26px;
+  }
+
+  summary {
+    font-weight: var(--text-summary-weight-desktop);
+    font-size: var(--text-summary-size-desktop);
+    line-height: var(--text-summary-line-height-desktop);
+    padding: 18px 0;
+  }
+  summary::after {
+    transform: translateX(-16px);
+  }
+  details[open] summary::after {
+    transform: rotate(180deg) translateX(16px);
+  }
 }

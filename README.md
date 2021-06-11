@@ -8,11 +8,11 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
-    - [Screenshot](#screenshot)
     - [Links](#links)
   - [My process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
+    - [Useful Links](#useful-links)
   - [Author](#author)
 
 ## Overview
@@ -24,15 +24,10 @@ Users should be able to:
 - View the optimal layout depending on their device's screen size
 - See hover states for interactive elements
 
-### Screenshot
-
-!["Desktop View"](./screenshots/desktop.png)
-!["Desktop View"](./screenshots/mobile.png)
-
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/FocusCookie/fm-faq-accordion-card)
-- Live Site URL: [Add live site URL here](https://focuscookie.github.io/fm-profile-card-component/)
+- Live Site URL: [Add live site URL here](https://focuscookie.github.io/fm-faq-accordion-card/)
 
 ## My process
 
@@ -40,15 +35,18 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- CSS Background gradients
 - ::before & ::after
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 
 ### What I learned
 
-I created the background with a rounded divs where the background was made with the CSS gradients. The two divs where added ::before and ::after the wrapper div.
+The positioning of the cube, card background and illustration was a littlebit tricky because the card should not let overflow the background. Only the cube should overflow.
+
+### Useful Links
+
+- Mozilla Details - [Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)
+- Details with custom list style - [Codepen](https://codepen.io/havardob/pen/abBJgQo)
 
 ## Author
 
